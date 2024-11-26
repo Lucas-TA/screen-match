@@ -6,6 +6,13 @@ public class Main {
         myMovie.minDuration = 200;
         myMovie.includedOnPlan = true;
 
-        System.out.println(myMovie);
+        myMovie.showInfo();
+        myMovie.rateMovie(8);
+        myMovie.rateMovie(9.2);
+        myMovie.rateMovie(10);
+        
+        System.out.println(myMovie.ratingSum);
+        System.out.println(myMovie.ratingTotal);
+        System.out.println(myMovie.getRatingMedia());
     }
 }
