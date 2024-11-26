@@ -1,5 +1,9 @@
 ### IntelliJ IDEA ###
 out/
+.idea/
+*.iml
+*.ipr
+*.iws
 !**/src/main/**/out/
 !**/src/test/**/out/
 
@@ -8,7 +12,7 @@ out/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 bin/
@@ -25,5 +29,45 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### OS-Specific ###
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.Trash-*
+
+### Build Directories ###
+target/
+build/
+dist/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+### Logs ###
+*.log
+
+### Temporary Files ###
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+
+### Others ###
+*.lock
+*.idea/
+*.iml
+.env
+node_modules/
+coverage/
