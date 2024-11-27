@@ -1,60 +1,20 @@
 package br.com.alura.screenmatch.models;
 
-public class Movie {
-    private String name;
-    private int releaseYear;
-    private boolean includedOnPlan;
-    private double ratingSum;
-    private int ratingTotal;
-    private int minDuration;
-
-    public void showInfo() {
-    	System.out.println("Movie title: " + name);
-    	System.out.println("Release year: " + releaseYear);
-    }
+public class Movie extends Title {
+    private String director;
     
-    public void setName(String name) {
-		this.name = name;
+    public String getDirector() {
+		return director;
+	}
+    public void setDirector(String director) {
+		this.director = director;
 	}
     
-    public void setReleaseYear(int releaseYear) {
-  		this.releaseYear = releaseYear;
-  	}
-    
-    public void setMinDuration(int minDuration) {
-		this.minDuration = minDuration;
+    @Override
+	public void showInfo() {
+    	System.out.println("Movie title: " + getName());
+    	System.out.println("Release year: " + getReleaseYear());
+    	System.out.println("Duration: " + getMinDuration());
+    	System.out.println("Director: " + director);
 	}
-    
-    public void setIncludedOnPlan(boolean includedOnPlan) {
-		this.includedOnPlan = includedOnPlan;
-	}
-    
-    public String getName() {
-		return name;
-	}
-    
-    public int getReleaseYear() {
-		return releaseYear;
-	}
-    
-    public int getMinDuration() {
-		return minDuration;
-	}
-  
-    public int getRatingTotal() {
-    	return ratingTotal;
-    }
-    
-    public boolean getIncludedOnPlan() {
-    	return includedOnPlan;
-    }
-    public void rateMovie(double rate) {
-    	ratingSum += rate;
-    	ratingTotal++;
-    }
-    
-    public double getRatingAverage() {
-    	return ratingSum / ratingTotal;
-    }
-    
 }
