@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+
 import br.com.alura.screenmatch.calculation.FilterRecomendation;
 import br.com.alura.screenmatch.calculation.TimeCalculator;
 import br.com.alura.screenmatch.models.Episode;
@@ -50,5 +52,12 @@ public class Main {
         episode.setTotalViews(400);
         episode.setSerie(theWalkingDead);
         filterRecomendation.filter(episode);
+        
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(myMovie);
+        movieList.add(Avatar);
+        System.out.println("List size: " + movieList.size());
+        System.out.println("Get movie: " + movieList.get(0).getName());
+        System.out.println(movieList);
     }
 }
