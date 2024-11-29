@@ -10,7 +10,14 @@ public class Title implements Classification {
     private int ratingTotal;
     private int minDuration;
 
-    public void showInfo() {
+    public Title(String name, int releaseYear, boolean includedOnPlan) {
+		super();
+		this.name = name;
+		this.releaseYear = releaseYear;
+		this.includedOnPlan = includedOnPlan;
+	}
+
+	public void showInfo() {
     	System.out.println("Movie title: " + name);
     	System.out.println("Release year: " + releaseYear);
     	System.out.println("Duration: " + minDuration);

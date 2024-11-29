@@ -5,6 +5,12 @@ public class Serie extends Title {
 	private boolean active;
 	private int episodesPerSeason;
 	private int minPerEpisode;
+
+	public Serie(String name, int releaseYear, boolean includedOnPlan, int seasons, boolean active) {
+		super(name, releaseYear, includedOnPlan);
+		this.seasons = seasons;
+		this.active = active;
+	}
 	
 	public int getSeasons() {
 		return seasons;
