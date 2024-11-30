@@ -52,5 +52,9 @@ public class Serie extends Title {
     	System.out.println("Seasons: " + seasons);
     	System.out.println("Duration: " + getMinDuration() + "min");
 	}
+	@Override
+    public String toString() {
+    	return "Serie: " + this.getName() + " (" + this.getReleaseYear() + "), Seasons: " + this.getSeasons();
+    }
 	
 }
